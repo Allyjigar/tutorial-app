@@ -1,0 +1,10 @@
+
+<div class="bg-image" style="background-repeat: no-repeat; background-size: cover; height: 100vh;" [ngStyle]="{'background-image': 'url(../../assets/img/' +img+ '.jpg)'}">
+  <div>
+    <button class="col-6 p-3" (click) = "prev()" >Anterior</button>
+    <button class="col-6 p-3" (click) = "next()"> Següent </button>
+  </div>
+  <ul class="d-flex flex-column align-items-center">
+      <li class="d-flex justify-content-center col-10 border border-dark border-3 rounded-pill m-2 text-center p-2 opacity-75" *ngFor="let text of texts; let i = index;" [class.bg-danger]="currentSentence == i" [class.opacity-100]="currentSentence == i" [class.bg-light]= "currentSentence != i">{{text.txt}}</li>
+  </ul>
+</div>

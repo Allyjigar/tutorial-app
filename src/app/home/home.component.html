@@ -1,0 +1,11 @@
+<div *ngIf="!tutorialOn">
+  <div class="d-flex flex-column justify-content-start align-items-end vh-100" style="background-image: url('{{texts[0].img}}'); background-repeat: no-repeat; background-size: cover;">
+    <h1 class="d-flex text-light m-5">Vols conéixer la historia del nostre heroi?</h1>
+    <p class="col-4 text-light me-5">Clicant al botó "Començar" trobarás la historia de l' heroi i tindrás la possibilitat d' anar veient les diferents vinyetes de la narració amb els botons d' anterior i següent. <br/>Comencem?</p>
+    <button class="btn btn-light m-5 col-3 text-primary" (click)="start()">Començar</button>
+  </div>
+</div>
+
+<div *ngIf="tutorialOn">
+  <app-escena [texts]="texts"></app-escena>
+</div>
